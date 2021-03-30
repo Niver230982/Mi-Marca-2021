@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mi Marca</string>
+    <string name="mi_marca">Mi Marca</string>
+    <string name="logo">TODO</string>
+    <string name="documento">Documento</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="loginbutton">LoginButton</string>
+    <string name="volverbutton">Volver</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="UserId">Documento</string>
+    <string name="Password">Contraseña</string>
+    <string name="userId">Documento</string>
+</resources>
