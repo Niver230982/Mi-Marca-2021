@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_marcar"
+            android:icon="@drawable/ic_baseline_fingerprint_24"
+            android:title="@string/menu_marcar" />
+    </group>
+    <group android:id="@+id/grupoMiUbicación" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mi_ubicación"
+            android:icon="@drawable/ic_baseline_room_24"
+            android:title="@string/menu_mi_ubicación" />
+    </group>
+    <group android:id="@+id/grupoParteMensual" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_parte_mensual"
+            android:icon="@drawable/ic_baseline_calendar_today_24"
+            android:title="@string/menu_parte_mensual" />
+    </group>
+    <group android:id="@+id/grupoDocumentación" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_documentación"
+            android:icon="@drawable/ic_baseline_archive_24"
+            android:title="@string/menu_documentación" />
+    </group>
+    <group android:id="@+id/grupoMensaje" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mensaje"
+            android:icon="@drawable/ic_baseline_message_24"
+            android:title="@string/menu_mensaje" />
+    </group>
+
+</menu>

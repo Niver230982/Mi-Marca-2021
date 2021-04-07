@@ -10,4 +10,11 @@
     <string name="UserId">Documento</string>
     <string name="Password">Contraseña</string>
     <string name="userId">Documento</string>
+    <string name="navigation_drawer_open">Ver</string>
+    <string name="navigation_drawer_close">Cerrar</string>
+    <string name="menu_marcar">Marcar</string>
+    <string name="menu_mi_ubicación">Mi Ubicación</string>
+    <string name="menu_parte_mensual">Parte Mensual</string>
+    <string name="menu_documentación">Documentación</string>
+    <string name="menu_mensaje">Mensaje</string>
 </resources>

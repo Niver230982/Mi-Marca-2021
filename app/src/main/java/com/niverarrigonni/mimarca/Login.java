@@ -16,7 +16,7 @@ public class Login extends AppCompatActivity {
 
     //Metodo de boton logueado
     public void Ingresar(View view){
-        Intent ingresar = new Intent(this, MainActivity.class);
+        Intent ingresar = new Intent(this, Menu_Lateral.class);
         startActivity(ingresar);
     }
 }
