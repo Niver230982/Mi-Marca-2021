@@ -18,5 +18,6 @@ public class Login extends AppCompatActivity {
     public void Ingresar(View view){
         Intent ingresar = new Intent(this, Menu_Lateral.class);
         startActivity(ingresar);
+
     }
 }

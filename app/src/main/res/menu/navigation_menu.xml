@@ -34,5 +34,11 @@
             android:icon="@drawable/ic_baseline_message_24"
             android:title="@string/menu_mensaje" />
     </group>
+    <group android:id="@+id/grupoSalir" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="@string/menu_salir" />
+    </group>
 
 </menu>

@@ -17,4 +17,6 @@
     <string name="menu_parte_mensual">Parte Mensual</string>
     <string name="menu_documentación">Documentación</string>
     <string name="menu_mensaje">Mensaje</string>
+    <string name="menu_salir">Salir</string>
+
 </resources>

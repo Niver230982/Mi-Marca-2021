@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo para volver al loguin
     public void Volver(View view){
-        Intent volver = new Intent(this, Login.class);
+        Intent volver = new Intent(this, Menu_Lateral.class);
         startActivity(volver);
     }
 }

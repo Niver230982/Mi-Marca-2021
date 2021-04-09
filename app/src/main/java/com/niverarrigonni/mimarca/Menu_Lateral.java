@@ -9,10 +9,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.navigation.NavigationView;
 
 public class Menu_Lateral extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,7 +46,8 @@ public class Menu_Lateral extends AppCompatActivity  implements NavigationView.O
                 Toast.makeText(getApplicationContext(),R.string.menu_marcar, Toast.LENGTH_LONG).show();
                 break;
             case R.id.nav_mi_ubicación:
-                Toast.makeText(getApplicationContext(),R.string.menu_mi_ubicación, Toast.LENGTH_LONG).show();
+                Intent miUbicación = new Intent(this, MainActivity.class);
+                startActivity(miUbicación);
                 break;
             case R.id.nav_parte_mensual:
                 Toast.makeText(getApplicationContext(),R.string.menu_parte_mensual, Toast.LENGTH_LONG).show();
@@ -54,11 +58,16 @@ public class Menu_Lateral extends AppCompatActivity  implements NavigationView.O
             case R.id.nav_mensaje:
                 Toast.makeText(getApplicationContext(),R.string.menu_mensaje, Toast.LENGTH_LONG).show();
                 break;
+            case R.id.nav_salir:
+                Intent login = new Intent(this, Login.class);
+                startActivity(login);
+                break;
             default:
                 throw new IllegalArgumentException("Opcion no existente");
         }
-
         return true;
     }
+
+
 
 }
