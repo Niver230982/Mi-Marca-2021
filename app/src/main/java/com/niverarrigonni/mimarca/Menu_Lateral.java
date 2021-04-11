@@ -56,7 +56,8 @@ public class Menu_Lateral extends AppCompatActivity  implements NavigationView.O
                 Toast.makeText(getApplicationContext(),R.string.menu_documentación, Toast.LENGTH_LONG).show();
                 break;
             case R.id.nav_mensaje:
-                Toast.makeText(getApplicationContext(),R.string.menu_mensaje, Toast.LENGTH_LONG).show();
+                Intent mensaje = new Intent(this, Mensaje.class);
+                startActivity(mensaje);
                 break;
             case R.id.nav_salir:
                 Intent login = new Intent(this, Login.class);
