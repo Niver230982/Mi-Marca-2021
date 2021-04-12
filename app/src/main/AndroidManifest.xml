@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.niverarrigonni.mimarca">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/mi_marca_2"
@@ -13,7 +9,8 @@
         android:roundIcon="@drawable/mi_marca_2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Mensaje"></activity>
+        <activity android:name=".Marca"></activity>
+        <activity android:name=".Mensaje" />
         <activity android:name=".Menu_Lateral" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Login">
@@ -31,5 +28,9 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAKuihvm97usRhcE_x309txV0fjeWvExmw" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

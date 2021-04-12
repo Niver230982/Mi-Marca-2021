@@ -43,7 +43,8 @@ public class Menu_Lateral extends AppCompatActivity  implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_marcar:
-                Toast.makeText(getApplicationContext(),R.string.menu_marcar, Toast.LENGTH_LONG).show();
+                Intent marcar = new Intent(this, Marca.class);
+                startActivity(marcar);
                 break;
             case R.id.nav_mi_ubicación:
                 Intent miUbicación = new Intent(this, MainActivity.class);
