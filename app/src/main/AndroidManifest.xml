@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/mi_marca_2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Marca"></activity>
+        <activity android:name=".Marca">
+            
+        </activity>
         <activity android:name=".Mensaje" />
         <activity android:name=".Menu_Lateral" />
         <activity android:name=".MainActivity" />

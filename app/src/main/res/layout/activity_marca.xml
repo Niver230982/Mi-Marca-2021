@@ -2,87 +2,79 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Marca">
 
-
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/entrada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/salida"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="38dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/iconfinder_exit_enter_leave_door_in_2931189"
+        android:drawableLeft="@drawable/iconfinder_exit_enter_leave_door_in_2931189"
+        android:onClick="Entrada"
+        android:text="@string/entrada"
+
+        app:layout_constraintBottom_toTopOf="@+id/salida"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.298"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.02" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="100dp"
-        android:contentDescription="@string/btnentrada"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconfinder_exit_enter_leave_door_in_2931189" />
+        app:layout_constraintVertical_bias="0.449" />
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/salida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="@string/entrada"
-        android:textSize="36sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/iconfinder_exit_enter_leave_door_out_2931185"
+        android:drawableLeft="@drawable/iconfinder_exit_enter_leave_door_out_2931185"
+        android:onClick="Salida"
+        android:text="@string/salida"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.348"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="56dp"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/iconfinder_ic_pause_circle_outline_48px_352583"
-        android:contentDescription="@string/btndescanso" />
+        app:layout_constraintTop_toBottomOf="@+id/descanso"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/descanso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/iconfinder_ic_pause_circle_outline_48px_352583"
+        android:drawableLeft="@drawable/iconfinder_ic_pause_circle_outline_48px_352583"
+        android:onClick="Descanso"
         android:text="@string/descanso"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/btnSalida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:layout_constraintVertical_bias="0.079"
-        app:srcCompat="@drawable/iconfinder_exit_enter_leave_door_out_2931185" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
 
+    <Button
+        android:id="@+id/retorno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/iconfinder_play_1894657"
+        android:drawableLeft="@drawable/iconfinder_play_1894657"
+        android:onClick="Retorno"
+        android:text="@string/retorno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/descanso"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
 </androidx.constraintlayout.widget.ConstraintLayout>
