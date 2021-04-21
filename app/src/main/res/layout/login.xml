@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@color/colorPrimary"
     android:clickable="false"
     tools:context=".MainActivity">
 
@@ -21,8 +21,11 @@
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/loginbutton"
         android:onClick="Ingresar"
-
+        android:background="@color/colorAccent"
         android:text="@string/ingresar"
+        android:state_pressed="true"
+        android:color="@color/colorAccentDark"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

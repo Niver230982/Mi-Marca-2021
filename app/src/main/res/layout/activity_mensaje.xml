@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mensaje">
+    tools:context=".Mensaje"
+    android:background="@color/colorPrimaryDark">
 
     <Button
         android:id="@+id/btn_Cargar_Img"
@@ -15,16 +16,21 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="663dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="20dp"
-        android:text="Selecciona Imagen"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorAccent"
         android:onClick="Subir_Archivo"
+        android:text="@string/selecciona_imagen"
+        android:state_pressed="true"
+        android:color="@color/colorAccentDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/Imagen_Subida"
@@ -32,9 +38,13 @@
         android:layout_height="150dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:color="@color/colorAccentDark"
+        android:contentDescription="@string/imgsubida"
+        android:state_pressed="true"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

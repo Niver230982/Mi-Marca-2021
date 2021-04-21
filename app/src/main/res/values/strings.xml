@@ -33,5 +33,8 @@
     <string name="salida">Salida</string>
     <string name="descanso">Descanso</string>
     <string name="retorno">Retorno</string>
+    <string name="usuario">Usuario</string>
+    <string name="selecciona_imagen">Selecciona Imagen</string>
+    <string name="imgsubida">imgSubida</string>
 
 </resources>

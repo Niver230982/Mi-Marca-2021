@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity"
     android:id = "@+id/geoloc">
 
@@ -47,7 +48,10 @@
         android:layout_marginBottom="8dp"
         android:onClick="Volver"
         android:text="@string/volverbutton"
+        android:background="@color/colorAccent"
         android:textSize="30sp"
+        android:state_pressed="true"
+        android:color="@color/colorAccentDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
