@@ -24,7 +24,8 @@
     <string name="btndescanso">btnDescanso</string>
     <string name="tventrada">tvEntrada</string>
     <string name="btnentrada">btnEntrada</string>
-
+    <string name="asunto_mensaje">Asunto:</string>
+    <string name="btnEnviar">Enviar</string>
     <string name="btnSalida">TODO</string>
 
     <string name="btnretorno">btnretorno</string>

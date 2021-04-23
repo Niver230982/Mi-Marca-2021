@@ -1,6 +1,7 @@
 package com.niverarrigonni.mimarca;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 
 public class Mensaje extends AppCompatActivity {
 
+    Toolbar toolbar;
     ImageView imagen;
 
     @Override
@@ -19,6 +21,10 @@ public class Mensaje extends AppCompatActivity {
         setContentView(R.layout.activity_mensaje);
 
         imagen= (ImageView) findViewById(R.id.Imagen_Subida);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void Subir_Archivo(View view) {

@@ -11,11 +11,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tvMensaje;
+    Toolbar toolbar;
 
     // Minimo tiempo para updates en Milisegundos
     private static final long MIN_TIME = 10000; // 10 segundos
@@ -37,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             iniciarLocalizacion();
         }
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 
     private void iniciarLocalizacion() {
@@ -76,9 +84,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Metodo para volver al loguin
-    public void Volver(View view){
-        Intent volver = new Intent(this, Menu_Lateral.class);
-        startActivity(volver);
-    }
 }

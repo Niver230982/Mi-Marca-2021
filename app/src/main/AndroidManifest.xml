@@ -12,16 +12,24 @@
         <activity android:name=".Marca">
             
         </activity>
-        <activity android:name=".Mensaje" />
+        <activity android:name=".Mensaje">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.niverarrigonni.mimarca.Menu_Lateral"/>
+        </activity>
         <activity android:name=".Menu_Lateral" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.niverarrigonni.mimarca.Menu_Lateral"/>
+        </activity>
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="com.google.android.gms.version"
