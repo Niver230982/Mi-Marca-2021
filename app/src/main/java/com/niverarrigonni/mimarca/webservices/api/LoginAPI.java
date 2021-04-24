@@ -1,10 +1,10 @@
-package com.niverarrigonni.mimarca;
+package com.niverarrigonni.mimarca.webservices.api;
 
-import com.niverarrigonni.mimarca.Usuario;
+import com.niverarrigonni.mimarca.webservices.models.WS;
 
+import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
-import retrofit2.Call;
 
 public interface LoginAPI {
     @POST("odoo-api/login/inicio")

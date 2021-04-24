@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.niverarrigonni.mimarca.webservices.api.LoginAPI;
+import com.niverarrigonni.mimarca.webservices.models.WS;
+import com.niverarrigonni.mimarca.webservices.sesion.Sesion;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -16,7 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText txUserId;
     EditText txPassword;
@@ -44,6 +47,7 @@ public class Login extends AppCompatActivity {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://165.227.110.148:8069/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
+        // TODO:Esto parece que sobra
         Usuario usuario = new Usuario();
         usuario.setDoc(doc);
         usuario.setPin(pin);
@@ -62,17 +66,19 @@ public class Login extends AppCompatActivity {
                         Usuario uss = new Usuario();
                         uss.setDoc(doc);
                         uss.setPin(pin);
-                        Intent intent = new Intent(Login.this, Menu_Lateral.class);
+                        Intent intent = new Intent(LoginActivity.this, Menu_Lateral.class);
+                        Sesion sesion = Sesion.getInstance();
+                        sesion.setDocuemnt(doc);
                         startActivity(intent);
                     }
                 } catch (Exception ex) {
-                    Toast.makeText(Login.this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, ex.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<WS> call, Throwable t) {
-                Toast.makeText(Login.this,"Error Inesperado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,"Error Inesperado", Toast.LENGTH_SHORT).show();
                 //Log.e("ERROR", t.getStackTrace().toString());
             }
         });

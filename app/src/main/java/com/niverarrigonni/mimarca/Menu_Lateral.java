@@ -5,17 +5,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.navigation.NavigationView;
 
 public class Menu_Lateral extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
@@ -57,11 +52,11 @@ public class Menu_Lateral extends AppCompatActivity  implements NavigationView.O
                 Toast.makeText(getApplicationContext(),R.string.menu_documentación, Toast.LENGTH_LONG).show();
                 break;
             case R.id.nav_mensaje:
-                Intent mensaje = new Intent(this, Mensaje.class);
+                Intent mensaje = new Intent(this, MensajeActivity.class);
                 startActivity(mensaje);
                 break;
             case R.id.nav_salir:
-                Intent login = new Intent(this, Login.class);
+                Intent login = new Intent(this, LoginActivity.class);
                 startActivity(login);
                 break;
             default:

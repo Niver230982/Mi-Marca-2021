@@ -1,4 +1,4 @@
-package com.niverarrigonni.mimarca;
+package com.niverarrigonni.mimarca.webservices.models;
 
 public class WS {
     public WS(Params params){
@@ -6,25 +6,18 @@ public class WS {
         this.params = params;
     }
 
-    public static class Params {
+    public static class Params extends ParametrosBase {
 
         public Params(String doc, String pin){
-            this.db = "odoo14";
-            this.login = "admin";
-            this.password = "admin";
+            super();
             this.doc = doc;
             this.pin = pin;
         }
         public Params(String doc){
-            this.db = "odoo14";
-            this.login = "admin";
-            this.password = "admin";
+            super();
             this.doc = doc;
         }
 
-        public String db;
-        public String login;
-        public String password;
         public String doc;
         public String pin;
     }
