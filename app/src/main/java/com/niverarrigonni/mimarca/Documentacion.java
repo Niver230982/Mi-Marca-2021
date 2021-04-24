@@ -45,7 +45,7 @@ public class Documentacion extends AppCompatActivity {
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
-                Toast.makeText(com.niverarrigonni.mimarca.Documentacion.this,listadocs.get(i).getNombre(), Toast.LENGTH_LONG).show();
+                Toast.makeText(Documentacion.this,listadocs.get(i).getNombre(), Toast.LENGTH_LONG).show();
             }
         });
 
