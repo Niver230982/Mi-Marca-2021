@@ -47,10 +47,10 @@ public class LoginActivity extends AppCompatActivity {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://165.227.110.148:8069/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
-        // TODO:Esto parece que sobra
+/*        // TODO:Esto parece que sobra
         Usuario usuario = new Usuario();
         usuario.setDoc(doc);
-        usuario.setPin(pin);
+        usuario.setPin(pin);*/
 
         final WS ws = new WS(new WS.Params(doc, pin));
 
@@ -63,9 +63,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         WS w = response.body();
                         //Log.d("value of x is ---> ", String.valueOf(w));
-                        Usuario uss = new Usuario();
+                        /*Usuario uss = new Usuario();
                         uss.setDoc(doc);
-                        uss.setPin(pin);
+                        uss.setPin(pin);*/
                         Intent intent = new Intent(LoginActivity.this, Menu_Lateral.class);
                         Sesion sesion = Sesion.getInstance();
                         sesion.setDocuemnt(doc);

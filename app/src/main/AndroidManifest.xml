@@ -18,6 +18,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.niverarrigonni.mimarca.Menu_Lateral"/>
         </activity>
+        <activity android:name=".DocumentacionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.niverarrigonni.mimarca.Menu_Lateral"/>
+        </activity>
         <activity android:name=".Menu_Lateral" />
         <activity android:name=".MainActivity">
             <meta-data

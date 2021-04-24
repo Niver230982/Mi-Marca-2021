@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Documentacion extends AppCompatActivity {
+public class DocumentacionActivity extends AppCompatActivity {
 
     private ArrayList<Documentos> listadocs;
     private Button actualizar;
@@ -45,7 +45,7 @@ public class Documentacion extends AppCompatActivity {
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
-                Toast.makeText(Documentacion.this,listadocs.get(i).getNombre(), Toast.LENGTH_LONG).show();
+                Toast.makeText(DocumentacionActivity.this,listadocs.get(i).getNombre(), Toast.LENGTH_LONG).show();
             }
         });
 
