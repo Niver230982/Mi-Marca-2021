@@ -50,18 +50,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_Mensaje"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.577" />
 
     <EditText
         android:id="@+id/mensajeText"
-        android:layout_width="331dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="25dp"
+        android:layout_width="330dp"
+        android:layout_height="136dp"
+        android:layout_marginBottom="56dp"
+        android:width="1dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:hint="Ingrese su mensaje"
+        android:inputType="textAutoCorrect|textMultiLine|textCapSentences|textImeMultiLine"
+        android:lines="10"
+        android:longClickable="true"
+        android:selectAllOnFocus="false"
+        android:soundEffectsEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/Imagen_Subida"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
