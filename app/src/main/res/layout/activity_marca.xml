@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/colorPrimaryDark"
     tools:context=".Marca">
+=======
+    tools:context=".MarcaActivity">
+>>>>>>> dba2af44beb03bc85fc132cd44a76d20f6eccfb5
 
     <include
         android:id="@+id/toolbar"
@@ -94,6 +98,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/descanso"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.585" />
 
+=======
+        app:layout_constraintVertical_bias="0.638" />
+
+    <TextView
+        android:id="@+id/plan_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/entrada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> dba2af44beb03bc85fc132cd44a76d20f6eccfb5
 </androidx.constraintlayout.widget.ConstraintLayout>

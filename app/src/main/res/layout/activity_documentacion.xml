@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".Documentacion">
+=======
+    tools:context=".DocumentacionActivity">
+>>>>>>> dba2af44beb03bc85fc132cd44a76d20f6eccfb5
 
 
     <include
@@ -33,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:background="@color/colorAccent"
-        android:onClick="Actualizar"
+        android:onClick="ActualizarAPI"
         android:text="@string/actualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,34 +48,9 @@
         android:id="@+id/tvInfoDocs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/actualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actualizar" />
-
-    <!--<Button
-        android:id="@+id/agregar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:background="@color/colorAccent"
-        android:onClick="Agregar"
-        android:text="@string/agregar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toEndOf="@+id/actualizar" />-->
-
-    <!--<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RvDocumentos"
-        android:layout_width="369dp"
-        android:layout_height="622dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
