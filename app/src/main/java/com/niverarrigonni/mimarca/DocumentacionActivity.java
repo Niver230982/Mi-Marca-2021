@@ -1,7 +1,6 @@
 package com.niverarrigonni.mimarca;
 
 import android.os.Bundle;
-import android.se.omapi.Session;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -60,7 +59,8 @@ public class DocumentacionActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
                 //A VER Q PASA
-                Toast.makeText(DocumentacionActivity.this,listadocs.get(i).params.asunto, Toast.LENGTH_LONG).show();
+                Toast.makeText(DocumentacionActivity.this,"...", Toast.LENGTH_LONG).show();
+                //listadocs.get(i).params.asunto
             }
         });
 
@@ -89,7 +89,7 @@ public class DocumentacionActivity extends AppCompatActivity {
             View item = inflater.inflate(R.layout.documento, null);
 
             TextView textView1 = item.findViewById(R.id.textView);
-            textView1.setText(listadocs.get(position).params.asunto);
+            //textView1.setText(listadocs.get(position).params.asunto);
 
             ImageView imageView1 = item.findViewById(R.id.imageView);
             imageView1.setImageResource(R.drawable.icon_doc);
@@ -106,26 +106,32 @@ public class DocumentacionActivity extends AppCompatActivity {
 
         //Llamo a la API
         DocumentosAPI documentosAPI = retrofit.create(DocumentosAPI.class);
+
         Call<Documentos> call = documentosAPI.recibirDocs(doc);
         call.enqueue(new Callback<Documentos>() {
             @Override
             public void onResponse(Call<Documentos> call, Response<Documentos> response) {
                 if(response.isSuccessful()){
-                    Documentos d = response.body();
-                    for(int i=0; i<=0; i++){
+                    tvInfoDocs.setText("Aca andamos: " + response.code());
+                    /*for(int i=0; i<=0; i++){
                         listadocs.add(d);
-                        tvInfoDocs.setText("Aca andamos");
-                    }
-
+                        tvInfoDocs.setText("Aca andamos");*/
                 }else {
                     tvInfoDocs.setText("LPM");
                 }
+                Documentos docResponse = response.body();
 
+                String content ="";
+                content+= "FECHA: "+docResponse.getFecha()+"/n";
+                content+= "ASUNTO: "+docResponse.getAsunto()+"/n";
+                content+= "DOC-ENCODE: "+docResponse.getDocEncode()+"/n";
+
+                tvInfoDocs.setText(content);
             }
 
             @Override
             public void onFailure(Call<Documentos> call, Throwable t) {
-
+                tvInfoDocs.setText(t.getMessage());
             }
         });
 
