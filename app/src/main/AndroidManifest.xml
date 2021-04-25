@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Marca">
+        <activity android:name=".MarcaActivity">
 
         </activity>
         <activity android:name=".MensajeActivity">
