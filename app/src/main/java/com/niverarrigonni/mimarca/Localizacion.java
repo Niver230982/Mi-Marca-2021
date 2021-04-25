@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.niverarrigonni.mimarca.webservices.sesion.LocationData;
+
 public class Localizacion implements LocationListener {
 
     MainActivity mainActivity;
@@ -32,6 +34,10 @@ public class Localizacion implements LocationListener {
                 + "Longitud = " + location.getLongitude();
 
         tvMensaje.setText(texto);
+
+        //Guardamos la ubicacin en la memoria ram para poder accederla desde otro lado.
+        LocationData.getInstance().setLatitude(location.getLatitude());
+        LocationData.getInstance().setLongitude(location.getLongitude());
 
         mapa(location.getLatitude(), location.getLongitude());
     }
