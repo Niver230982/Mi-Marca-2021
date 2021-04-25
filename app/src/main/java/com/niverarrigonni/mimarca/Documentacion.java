@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -20,6 +21,7 @@ import java.util.Date;
 
 public class Documentacion extends AppCompatActivity {
 
+    Toolbar toolbar;
     private ArrayList<Documentos> listadocs;
     private Button actualizar;
     private ListView lv1;
@@ -30,6 +32,10 @@ public class Documentacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_documentacion);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Date fecha = new Date(Calendar.DATE);
         actualizar = findViewById(R.id.actualizar);

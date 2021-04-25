@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class Marca extends AppCompatActivity {
 
-
+    Toolbar toolbar;
 
     @SuppressLint("NewApi")
     @Override
@@ -28,8 +28,9 @@ public class Marca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marca);
 
-
-
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
     }
