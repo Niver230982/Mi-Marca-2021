@@ -104,11 +104,11 @@ public class DocumentacionActivity extends AppCompatActivity {
         //Recupero el doc desde la session guardada en el login
 
         String doc = Sesion.getInstance().getDocuemnt();
-        Documentos docSend = new Documentos(new Documentos.Params(doc));
+
+        final Documentos docSend = new Documentos(new Documentos.Params(doc));
 
         //Llamo a la API
         DocumentosAPI documentosAPI = retrofit.create(DocumentosAPI.class);
-
         Call<Documentos> call = documentosAPI.recibirDocs(docSend);
         call.enqueue(new Callback<Documentos>() {
             @Override
