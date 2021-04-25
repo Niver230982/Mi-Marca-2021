@@ -3,6 +3,7 @@ package com.niverarrigonni.mimarca.webservices.models;
 import java.util.List;
 
 public class ResponseDocumentos {
+
     public ResponseDocumentos(List<Result> result) {this.result = result;}
 
     public static class Result{

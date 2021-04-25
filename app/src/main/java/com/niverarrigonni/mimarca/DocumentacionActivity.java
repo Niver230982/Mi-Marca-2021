@@ -16,11 +16,14 @@ import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.niverarrigonni.mimarca.utils.DocumentosUtils;
 import com.niverarrigonni.mimarca.webservices.api.DocumentosAPI;
 import com.niverarrigonni.mimarca.webservices.models.Documentos;
+import com.niverarrigonni.mimarca.webservices.models.ResponseDocumentos;
 import com.niverarrigonni.mimarca.webservices.sesion.Sesion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -109,30 +112,38 @@ public class DocumentacionActivity extends AppCompatActivity {
 
         //Llamo a la API
         DocumentosAPI documentosAPI = retrofit.create(DocumentosAPI.class);
-        Call<Documentos> call = documentosAPI.recibirDocs(docSend);
-        call.enqueue(new Callback<Documentos>() {
+        Call<ResponseDocumentos> call = documentosAPI.recibirDocs(docSend);
+        call.enqueue(new Callback<ResponseDocumentos>() {
+
             @Override
-            public void onResponse(Call<Documentos> call, Response<Documentos> response) {
+            public void onResponse(Call<ResponseDocumentos> call, Response<ResponseDocumentos> response) {
                 if(response.isSuccessful()){
-                    tvInfoDocs.setText("Aca andamos: " + response.code());
+                    List<ResponseDocumentos.Result> resultados = response.body().result;
+                    if(!resultados.isEmpty()){
+                        ResponseDocumentos.Result result = resultados.get(0);
+                        tvInfoDocs.setText(DocumentosUtils.crearDocumentos(result));
+                    }
+                    Toast.makeText(DocumentacionActivity.this, "Recibida la Api", Toast.LENGTH_SHORT).show();
+                    //tvInfoDocs.setText("Aca andamos: " + response.code());
                     /*for(int i=0; i<=0; i++){
                         listadocs.add(d);
                         tvInfoDocs.setText("Aca andamos");*/
                 }else {
                     tvInfoDocs.setText("LPM");
+                    Toast.makeText(DocumentacionActivity.this, "No se pudo Recibir API", Toast.LENGTH_SHORT).show();
                 }
-                Documentos docResponse = response.body();
+              /*  Documentos docResponse = response.body();
 
                 String content ="";
                 content+= "FECHA: "+docResponse.getFecha()+"/n";
                 content+= "ASUNTO: "+docResponse.getAsunto()+"/n";
                 content+= "DOC-ENCODE: "+docResponse.getDocEncode()+"/n";
 
-                tvInfoDocs.setText(content);
+                tvInfoDocs.setText(content);*/
             }
 
             @Override
-            public void onFailure(Call<Documentos> call, Throwable t) {
+            public void onFailure(Call<ResponseDocumentos> call, Throwable t) {
                 tvInfoDocs.setText(t.getMessage());
             }
         });
