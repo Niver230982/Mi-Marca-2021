@@ -19,20 +19,19 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="32dp"
-        android:contentDescription="@string/loginbutton"
-        android:onClick="Ingresar"
         android:background="@color/colorAccent"
-        android:text="@string/ingresar"
-        android:state_pressed="true"
         android:color="@color/colorAccentDark"
+        android:contentDescription="@string/loginbutton"
+        android:state_pressed="true"
+        android:text="@string/ingresar"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txPassword"
-        tools:text="Ingresar"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+        tools:text="Ingresar" />
 
     <ImageView
         android:id="@+id/ivMiMarca"
@@ -88,4 +87,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txUserId" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

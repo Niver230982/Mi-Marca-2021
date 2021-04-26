@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.niverarrigonni.mimarca.webservices.api.LoginAPI;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText txUserId;
     EditText txPassword;
+    TextView tvError;
 
 
     @Override
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         txUserId = findViewById(R.id.txUserId);
         txPassword = findViewById(R.id.txPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        tvError= findViewById(R.id.tvError);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
@@ -70,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<WS> call, Throwable t) {
-                Toast.makeText(LoginActivity.this,"Error Inesperado", Toast.LENGTH_SHORT).show();
+                tvError.setText(t.getMessage());
                 //Log.e("ERROR", t.getStackTrace().toString());
             }
         });

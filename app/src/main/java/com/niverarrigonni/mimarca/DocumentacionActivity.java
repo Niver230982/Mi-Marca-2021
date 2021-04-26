@@ -33,9 +33,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DocumentacionActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
 
-    private ArrayList<Documentos> listadocs;
+    private ArrayList<ResponseDocumentos.Result> listadocs;
     private Button actualizar;
     private ListView lv1;
     private TextView tvInfoDocs;
@@ -47,11 +46,7 @@ public class DocumentacionActivity extends AppCompatActivity {
 
         actualizar = findViewById(R.id.actualizar);
         tvInfoDocs = findViewById(R.id.tvInfoDocs);
-        listadocs = new ArrayList<Documentos>();
-
-        /*toolbar=findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+        listadocs = new ArrayList<>();
         
         AdaptadorDocumentos adaptador = new AdaptadorDocumentos (this);
         lv1 = findViewById(R.id.list1);
@@ -75,10 +70,7 @@ public class DocumentacionActivity extends AppCompatActivity {
         });
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
-
-    class AdaptadorDocumentos extends ArrayAdapter<Documentos> {
+    class AdaptadorDocumentos extends ArrayAdapter<ResponseDocumentos.Result> {
 
         AppCompatActivity appCompatActivity;
 
@@ -120,9 +112,11 @@ public class DocumentacionActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     List<ResponseDocumentos.Result> resultados = response.body().result;
                     if(!resultados.isEmpty()){
-
-                        ResponseDocumentos.Result result = resultados.get(0);
-                        tvInfoDocs.setText(DocumentosUtils.crearDocumentos(result));
+                        for (int i=0; i>resultados.size(); i++) {
+                            ResponseDocumentos.Result result = resultados.get(i);
+                            listadocs.add(result);
+                            //tvInfoDocs.setText(DocumentosUtils.crearDocumentos(result));
+                        }
                     }
                     Toast.makeText(DocumentacionActivity.this, "Recibida la Api", Toast.LENGTH_SHORT).show();
 
