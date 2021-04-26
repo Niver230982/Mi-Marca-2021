@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@color/colorPrimaryDark"
     tools:context=".Marca">
 =======
@@ -98,11 +97,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/descanso"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.585" />
-
-=======
-        app:layout_constraintVertical_bias="0.638" />
 
     <TextView
         android:id="@+id/plan_dia"

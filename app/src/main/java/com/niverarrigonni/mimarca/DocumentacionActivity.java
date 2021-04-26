@@ -120,26 +120,16 @@ public class DocumentacionActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     List<ResponseDocumentos.Result> resultados = response.body().result;
                     if(!resultados.isEmpty()){
+
                         ResponseDocumentos.Result result = resultados.get(0);
                         tvInfoDocs.setText(DocumentosUtils.crearDocumentos(result));
                     }
                     Toast.makeText(DocumentacionActivity.this, "Recibida la Api", Toast.LENGTH_SHORT).show();
-                    //tvInfoDocs.setText("Aca andamos: " + response.code());
-                    /*for(int i=0; i<=0; i++){
-                        listadocs.add(d);
-                        tvInfoDocs.setText("Aca andamos");*/
+
                 }else {
                     tvInfoDocs.setText("LPM");
                     Toast.makeText(DocumentacionActivity.this, "No se pudo Recibir API", Toast.LENGTH_SHORT).show();
                 }
-              /*  Documentos docResponse = response.body();
-
-                String content ="";
-                content+= "FECHA: "+docResponse.getFecha()+"/n";
-                content+= "ASUNTO: "+docResponse.getAsunto()+"/n";
-                content+= "DOC-ENCODE: "+docResponse.getDocEncode()+"/n";
-
-                tvInfoDocs.setText(content);*/
             }
 
             @Override

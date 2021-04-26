@@ -15,7 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-<<<<<<< HEAD
         <activity android:name=".Parte_MensualActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -25,17 +24,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.niverarrigonni.mimarca.Menu_Lateral" />
-=======
+        </activity>
+
         <activity android:name=".MarcaActivity">
 
->>>>>>> dba2af44beb03bc85fc132cd44a76d20f6eccfb5
         </activity>
         <activity android:name=".MensajeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.niverarrigonni.mimarca.Menu_Lateral" />
-        </activity>
-        <activity android:name=".Documentacion">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.niverarrigonni.mimarca.Menu_Lateral" />
